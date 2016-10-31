@@ -18,9 +18,7 @@ import UIKit
     // MARK: Properties
     @IBOutlet weak public var alertMaskBackground: UIImageView!
     @IBOutlet weak public var alertView: UIView!
-    @IBOutlet weak public var alertViewWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak public var alertImage: UIImageView!
-    @IBOutlet weak public var alertImageHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak public var alertTitle: UILabel!
     @IBOutlet weak public var alertDescription: UILabel!
     @IBOutlet weak public var alertActionStackView: UIStackView!
@@ -29,7 +27,21 @@ import UIKit
     var animator : UIDynamicAnimator?
     
     public var gravityDismissAnimation = true
-    
+
+    // Alert
+    @IBOutlet weak public var alertViewWidthConstraint: NSLayoutConstraint!
+    // Header View
+    @IBOutlet weak public var marginTopHeaderViewConstraint: NSLayoutConstraint!
+    @IBOutlet weak public var alertImageHeightConstraint: NSLayoutConstraint!
+    // title label
+    @IBOutlet weak public var marginTopTitleLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak public var marginLeftTitleLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak public var marginRightTitleLabelConstraint: NSLayoutConstraint!
+    // description label
+    @IBOutlet weak public var marginTopDescriptionLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak public var marginLeftDescriptionLabelConsrraint: NSLayoutConstraint!
+    @IBOutlet weak public var marginRightDescriptionLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak public var marginBottonDescriptionLabelConstraint: NSLayoutConstraint!
     
     //MARK: - Initialiser
     @objc public convenience init(title: String, description: String, image: UIImage?, style: PMAlertControllerStyle) {
